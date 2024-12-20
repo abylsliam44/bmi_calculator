@@ -1,0 +1,128 @@
+body {
+    background: linear-gradient(135deg, #1e1e1e, #323232);
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.decoration {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: sparkle 5s infinite ease-in-out;
+}
+
+.decoration:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.decoration:nth-child(2) {
+    top: 50%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.decoration:nth-child(3) {
+    top: 70%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.container {
+    max-width: 400px;
+    background: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: relative;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+label {
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+input {
+    background: #1f1f1f;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+
+.btn-primary {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ff9900;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(255, 153, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 1.5s ease;
+}
